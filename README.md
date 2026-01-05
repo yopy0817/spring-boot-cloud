@@ -25,11 +25,12 @@
 ## 3. ~/.aws/config 파일 생성
 ### 파일 위치
 - **Windows**
-  C:\Users\사용자이름\.aws\credentials
-  C:\Users\사용자이름\.aws\config
+- C:\Users\사용자이름\.aws\credentials
+- C:\Users\사용자이름\.aws\config
+
 - **macOS / Linux**
-  ~/.aws/credentials
-  ~/.aws/config
+- ~/.aws/credentials
+- ~/.aws/config
   
 ### 파일 내용 credentials
 ```ini
