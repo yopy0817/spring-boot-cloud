@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+
+<body>
+	
+	<h3>ses사용하기</h3>
+	<button class="send_email">인증번호보내기</button>
+	
+	
+	<script>
+	//ses활용하기
+	
+	let send_email = document.querySelector(".send_email");
+	send_email.addEventListener('click', function(e) {
+		fetch('/sendEmail')
+		.then(response => response.text())
+		.then(a => console.log(a))
+		.catch(err => alert('메일전송에 실패했습니다:' + err) );
+	});
+	</script>
+	
+	
+	
+	
+	
+	
+	<hr/>
+	<h3>sns + sqs메시지push</h3>
+	<button class="send_sns">홍길동이 주문을 눌렀습니다(SNS => SQS로 전송시킵니다) </button>
+	
+	
+	<script>
+		let send_sns = document.querySelector(".send_sns");
+		send_sns.addEventListener('click', function(e) {
+			fetch('/sendSns')
+			.then(response => response.text())
+			.then(a => console.log(a))
+			.catch(err => alert('전송에 실패했습니다:' + err) );
+		});
+	</script>
+
+	
+	<hr/>
+	<h3>sqs메시지 폴링(aws sdk사용해서 당기기)</h3>
+	<button class="poll_sqs">홍길동 씨의 주문내역을 가져옵니다</button>
+
+	
+	<script>
+		let poll_sqs = document.querySelector(".poll_sqs");
+		poll_sqs.addEventListener('click', function(e) {
+			fetch('/pollSqs')
+			.then(response => response.text())
+			.then(a => console.log(a))
+			.catch(err => alert('전송에 실패했습니다:' + err) );
+		});
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
