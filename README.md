@@ -31,13 +31,15 @@
   ~/.aws/credentials
   ~/.aws/config
   
-
-### 파일 내용
+### 파일 내용 credentials
 ```ini
 [default]
 aws_access_key_id=AKIAxxxxxxxxxxxx
 aws_secret_access_key=xxxxxxxxxxxxxxxxxxxxxxxx
+```
 
+### 파일 내용 config
 ```ini
 [default]
 region=ap-northeast-2
+```
